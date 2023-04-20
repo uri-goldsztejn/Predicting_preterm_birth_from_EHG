@@ -17,7 +17,7 @@ count =1;
 for k = 1:length(headerFiles)
     % Preprocess data
     [downsample_signal,t_downsample,is_preterm(count),name,gestational_age(count),delivery_age(count)] = preprocessFile(k,myDir);
-    % Exclude recordings done before 28 weeks of gestation
+    % Exclude recordings done before 26 weeks of gestation
     if  gestational_age(count) < 26*7
         k;
         continue
@@ -118,6 +118,4 @@ for i=1:length(y_test_stored)
 y_test_stored_binary{i} =y_test_stored{i}>258; 
 end
 
-[X_auc_r_EHG,Y_auc_r_EHG,T_auc,AUC_total_ehg_r] = perfcurve(y_test_stored_binary,y_hat,1);
-
-% save('./results/roc_aucs/EHG_regression_69','y_hat','y_test_stored');
+% save('./results/roc_aucs/EHG_regression','y_hat','y_test_stored');

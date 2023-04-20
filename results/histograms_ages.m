@@ -18,17 +18,17 @@ count = 1;
 
 for k = 1:length(headerFiles)
     
-    [x_tmp,~,tmp_name] = read_data_2(k,myDir);
+    [x_tmp,~,tmp_name] = read_data(k,myDir);
     
     if x_tmp(1) < 26*7
         k;
         continue
     end
     
-    [all.X(count,:),all.y(count,:),names{count} ] = read_data_2(k,myDir);
+    [all.X(count,:),all.y(count,:),names{count} ] = read_data(k,myDir);
     
     if tmp_name(6) ~='t' % sample in tpehg
-        [tpehg.X(count,:),tpehg.y(count,:),names{count} ] = read_data_2(k,myDir);
+        [tpehg.X(count,:),tpehg.y(count,:),names{count} ] = read_data(k,myDir);
         count_tpehg = count_tpehg+1;
     end   
     

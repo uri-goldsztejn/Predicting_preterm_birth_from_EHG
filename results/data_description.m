@@ -19,8 +19,8 @@ count = 1;
 for k = 1:length(headerFiles)
     
     
-    [downsample_signal,t_downsample,is_preterm(count),name,gestational_age(count),delivery_age(count)] = preprocessFile_v3(k,myDir);
-    [X(count,:),y(count,:),names{count} ] = read_data_2(k,myDir);
+    [downsample_signal,t_downsample,is_preterm(count),name,gestational_age(count),delivery_age(count)] = preprocessFile(k,myDir);
+    [X(count,:),y(count,:),names{count} ] = read_data(k,myDir);
     % Exclude recordings done before 26 weeks of gestation
     if  gestational_age(count) < 26*7
         k;

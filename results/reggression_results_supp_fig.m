@@ -1,6 +1,6 @@
 clear all; close all; clc
 rng('default')
-addpath('results/roc_aucs_5')
+addpath('results/roc_aucs')
 addpath(genpath('utils'))
 
 %metadata

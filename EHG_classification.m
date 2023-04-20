@@ -116,8 +116,5 @@ for j = 1:length(y_hat)
     y_hat_2{j} = tmp(:,2);
 end
 
-[X_auc_c_EHG,Y_auc_c_EHG,T_auc,AUC_total_ehg_c] = perfcurve(y_test_stored,y_hat_2,1);
-
 % Save data for analysis
 % save('./results/roc_aucs/EHG_classification','y_hat_2','y_test_stored');
-

@@ -14,7 +14,7 @@ LabelsVector = {};
 count =1;
 for k = 1:length(headerFiles)
     [X(count,:),y(count,:),names{count} ] = read_data(k,myDir);   
-    % Exclude recordings done before 28 weeks of gestation
+    % Exclude recordings done before 26 weeks of gestation
     if X(count,1) < 26*7
         k;
         continue
@@ -71,6 +71,5 @@ end
 
 %%
 
-
 % Save data for analysis
-save('./results/roc_aucs/regression_metadata','y_test_cell','y_hat_cell','y');
+% save('./results/roc_aucs/regression_metadata','y_test_cell','y_hat_cell','y');

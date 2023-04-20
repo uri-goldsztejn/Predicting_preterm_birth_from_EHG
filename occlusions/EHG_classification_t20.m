@@ -19,7 +19,7 @@ count =1;
 for k = 1:length(headerFiles)
     % Preprocess data
     
-    [downsample_signal,t_downsample,is_preterm(count),name,gestational_age(count),delivery_age(count)] = preprocessFile_v3(k,myDir);
+    [downsample_signal,t_downsample,is_preterm(count),name,gestational_age(count),delivery_age(count)] = preprocessFile(k,myDir);
     if gestational_age(count) < 26*7
         k;
         continue
@@ -120,4 +120,4 @@ end
 
 
 % Save data for analysis
-save('./occlusions_2/results_EHG_t20','y_hat','y_hat_2','y_test_stored');
+save('./occlusions/results_EHG_t20','y_hat','y_hat_2','y_test_stored');

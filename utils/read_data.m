@@ -1,6 +1,6 @@
 function [X,y,name] = read_data(k,myDir)
-% read_data_2 Reads the clinical information of a specified recording. 
-%   C = read_data_2(k,myDir) reads sample number k in myDir.
+% read_data Reads the clinical information of a specified recording. 
+%   C = read_data(k,myDir) reads sample number k in myDir.
 %   Returns: X - vector of [gestational_age,age, parity, abortions, weight, hypertension, diabetes, placental_position, bleeding1, bleeding2, funneling, smoker];
 %            y = vector of [is_preterm,delivery_age]; is_preterm - flag
 %            indicating whether the pregnancy ended in preterm labor. 

@@ -1,6 +1,6 @@
 % Calcualte values in Table 2 of the manuscript
 clear all; close all; clc
-addpath('roc_aucs_5')
+addpath('roc_aucs')
 addpath(genpath('utils'))
 
 % Load results from clinical information
