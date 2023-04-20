@@ -1,0 +1,20 @@
+tpehgt_p006 8 20 36000
+tpehgt_p006.dat 16 819/mV 16 0 -4 7322 0 EHG1
+tpehgt_p006.dat 16 819/mV 16 0 -2 -77 0 EHG1_Butter-4-bi-0.08-5
+tpehgt_p006.dat 16 819/mV 16 0 163 -7867 0 EHG2
+tpehgt_p006.dat 16 819/mV 16 0 41 2297 0 EHG2_Butter-4-bi-0.08-5
+tpehgt_p006.dat 16 819/mV 16 0 118 4669 0 EHG3
+tpehgt_p006.dat 16 819/mV 16 0 31 1498 0 EHG3_Butter-4-bi-0.08-5
+tpehgt_p006.dat 16 819/mV 16 0 0 14579 0 TOCO
+tpehgt_p006.dat 16 819/mV 16 0 0 -173 0 TOCO_Butter-4-bi-0.08-5
+#Comments:
+# RecID	tpehgt_p006
+# RecType Preterm
+# Gestation 36
+# Rectime 26
+# Age 23
+# Parity 0
+# Abortions 0
+# Weight 75
+# Placental_position front
+# Smoker yes
