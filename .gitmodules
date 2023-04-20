@@ -1,0 +1,3 @@
+[submodule "utils/auc_CI_computations"]
+	path = utils/auc_CI_computations
+	url = https://github.com/brian-lau/MatlabAUC
