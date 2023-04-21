@@ -6,6 +6,7 @@ addpath(genpath('utils'))
 
 % Load clinical information data
 results_class_meta = load('classification_metadata.mat');
+
 results_reg_meta = load('regression_metadata.mat');
 
 % EHG

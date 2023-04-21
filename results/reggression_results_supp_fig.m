@@ -22,8 +22,8 @@ tiledlayout(3,2,'TileSpacing','loose');
 
 %% Clinical information
 
-y_hat_cat =[];
-y_test_cat =[];
+y_hat_cat = [];
+y_test_cat = [];
 
 for i = 1:5
     y_hat_cat = [y_hat_cat;results_reg_meta.y_hat_cell{i}];
@@ -86,7 +86,7 @@ mean(slope);
 ci_slope = CI95(slope);
 
 str = {['RMSE = ', num2str(round(mean(RMSE),2)), ' (', num2str(round(ci_RMSE(1),2)), ', ',num2str(round(ci_RMSE(2),2)), ') days'],...
-    ['R^2 = ', num2str(round(mean(R2),2)), ' (', num2str(round(ci_r2(1),2)), ', ',num2str(round(ci_r2(2),2)), ')' ],...
+    ['R^2 = ', num2str(round(mean(R2),2)), ' (', sprintf('%.2f',round(ci_r2(1),2)), ', ',num2str(round(ci_r2(2),2)), ')' ],...
     ['Slope = ' num2str(round(mean(slope),2)), ' (', num2str(round(ci_slope(1),2)), ', ',num2str(round(ci_slope(2),2)), ')' ]};
 
 annotation('textbox', [0.28, 0.72, 0.5, 0.06], 'String', str,'FontName','Arial','FontSize',legend_font_size,'LineStyle','none')
@@ -166,12 +166,16 @@ mean(mean_minus_two_Stds);
 ci_mean_minus = CI95(mean_minus_two_Stds);
 
 str1 = ['+1.96 s.d.: ',num2str(round(mean(mean_plus_two_Stds),2)), ' (',num2str(round(ci_mean_plus(1),2)), ', ',num2str(round(ci_mean_plus(2),2)), ')'];
-str2 = ['Mean: ',num2str(round(mean(mean_diffs),2)), ' (',num2str(round(ci_mean(1),2)), ', ',num2str(round(ci_mean(2),2)), ')'];
-str3 = ['-1.96 s.d.: ',num2str(round(mean(mean_minus_two_Stds),2)), ' (',num2str(round(ci_mean_minus(1),2)), ', ',num2str(round(ci_mean_minus(2),2)), ')'];
+str2 = ['Mean: ',num2str(round(mean(mean_diffs),2)), ' (', sprintf('%.2f',(round(ci_mean(1),2))), ', ',num2str(round(ci_mean(2),2)), ')'];
 
-annotation('textbox', [0.57, 0.86, 0.5, 0.06], 'String', str1,'FontName','Arial','FontSize',legend_font_size,'LineStyle','none')
-annotation('textbox', [0.57, 0.80, 0.5, 0.06], 'String', str2,'FontName','Arial','FontSize',legend_font_size,'LineStyle','none')
-annotation('textbox', [0.57, 0.74, 0.5, 0.06], 'String', str3,'FontName','Arial','FontSize',legend_font_size,'LineStyle','none')
+str_3_1 = '-1.96 s.d.: ';
+str_3_2 = [num2str(round(mean(mean_minus_two_Stds),2)), ' (',sprintf('%.2f',(round(ci_mean_minus(1),2))), ', ',sprintf('%.2f',(round(ci_mean_minus(2),2))), ')'];
+str3 = [{str_3_1},{str_3_2}];
+
+
+annotation('textbox', [0.57, 0.855, 0.5, 0.06], 'String', str1,'FontName','Arial','FontSize',legend_font_size,'LineStyle','none')
+annotation('textbox', [0.57, 0.795, 0.5, 0.06], 'String', str2,'FontName','Arial','FontSize',legend_font_size,'LineStyle','none')
+annotation('textbox', [0.57, 0.75, 0.5, 0.06], 'String', str3,'FontName','Arial','FontSize',legend_font_size,'LineStyle','none')
 
 
 
@@ -324,11 +328,14 @@ ci_mean_minus = CI95(mean_minus_two_Stds);
 
 str1 = ['+1.96 s.d.: ',num2str(round(mean(mean_plus_two_Stds),2)), ' (',num2str(round(ci_mean_plus(1),2)), ', ',num2str(round(ci_mean_plus(2),2)), ')'];
 str2 = ['Mean: ',num2str(round(mean(mean_diffs),2)), ' (',num2str(round(ci_mean(1),2)), ', ',num2str(round(ci_mean(2),2)), ')'];
-str3 = ['-1.96 s.d.: ',num2str(round(mean(mean_minus_two_Stds),2)), ' (',num2str(round(ci_mean_minus(1),2)), ', ',num2str(round(ci_mean_minus(2),2)), ')'];
 
-annotation('textbox', [0.57, 0.56, 0.5, 0.06], 'String', str1,'FontName','Arial','FontSize',legend_font_size,'LineStyle','none')
+str3_1 = '-1.96 s.d.:';
+str3_2 = [num2str(round(mean(mean_minus_two_Stds),2)), ' (',num2str(round(ci_mean_minus(1),2)), ', ',num2str(round(ci_mean_minus(2),2)), ')'];
+str3 = [{str3_1},{str3_2}];
+
+annotation('textbox', [0.57, 0.555, 0.5, 0.06], 'String', str1,'FontName','Arial','FontSize',legend_font_size,'LineStyle','none')
 annotation('textbox', [0.57, 0.5, 0.5, 0.06], 'String', str2,'FontName','Arial','FontSize',legend_font_size,'LineStyle','none')
-annotation('textbox', [0.57, 0.45, 0.5, 0.06], 'String', str3,'FontName','Arial','FontSize',legend_font_size,'LineStyle','none')
+annotation('textbox', [0.57, 0.46, 0.5, 0.06], 'String', str3,'FontName','Arial','FontSize',legend_font_size,'LineStyle','none')
 
 %% Combined
 
@@ -485,12 +492,14 @@ ci_mean_minus = CI95(mean_minus_two_Stds);
 
 str1 = ['+1.96 s.d.: ',num2str(round(mean(mean_plus_two_Stds),2)), ' (',num2str(round(ci_mean_plus(1),2)), ', ',num2str(round(ci_mean_plus(2),2)), ')'];
 str2 = ['Mean: ',num2str(round(mean(mean_diffs),2)), ' (',num2str(round(ci_mean(1),2)), ', ',num2str(round(ci_mean(2),2)), ')'];
-str3 = ['-1.96 s.d.: ',num2str(round(mean(mean_minus_two_Stds),2)), ' (',num2str(round(ci_mean_minus(1),2)), ', ',num2str(round(ci_mean_minus(2),2)), ')'];
 
+str3_1 = '-1.96 s.d.:';
+str_3_2 = [ num2str(round(mean(mean_minus_two_Stds),2)), ' (',num2str(round(ci_mean_minus(1),2)), ', ',num2str(round(ci_mean_minus(2),2)), ')'];
+str3 = [{str3_1},{str_3_2}];
 
 annotation('textbox', [0.57, 0.26, 0.5, 0.06], 'String', str1,'FontName','Arial','FontSize',legend_font_size,'LineStyle','none')
 annotation('textbox', [0.57, 0.21, 0.5, 0.06], 'String', str2,'FontName','Arial','FontSize',legend_font_size,'LineStyle','none')
-annotation('textbox', [0.57, 0.15, 0.5, 0.06], 'String', str3,'FontName','Arial','FontSize',legend_font_size,'LineStyle','none')
+annotation('textbox', [0.57, 0.17, 0.5, 0.06], 'String', str3,'FontName','Arial','FontSize',legend_font_size,'LineStyle','none')
 
 annotation('textbox', [0.43, 0.92 0.2, 0.06], 'String', "Metadata alone",'FontName','Arial','FontSize',16,'LineStyle','none','fontweight', 'bold')
 annotation('textbox', [0.45, 0.61 0.2, 0.06], 'String', "EHG alone",'FontName','Arial','FontSize',16,'LineStyle','none','fontweight', 'bold')
