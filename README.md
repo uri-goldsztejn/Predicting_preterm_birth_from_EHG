@@ -1,5 +1,3 @@
-[![DOI](https://zenodo.org/badge/630230253.svg)](https://zenodo.org/badge/latestdoi/630230253)
-
 # Predicting preterm births from electrohysterogram recordings via deep learning
 
 This is the code developed for our paper "[Predicting preterm births from electrohysterogram recordings via deep learning](https://www.medrxiv.org/content/10.1101/2022.12.25.22283937v1)"  
@@ -36,7 +34,7 @@ Our findings suggest that preterm births can be predicted from EHGs and clinical
 * *results/* - Scripts for recreating the figures in the publication.
 * *occlusions/* - Scripts for recreating the ablation study described in the publication.
 * *utils/* - Auxiliary functions.
-* *dataset/* - EHG and clinical information from the Physionet repository.
+* *dataset/* - Folder to store EHG and clinical information from the Physionet repository.
 
 ## Data
 
