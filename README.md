@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/630230253.svg)](https://zenodo.org/badge/latestdoi/630230253)
+
 # Predicting preterm births from electrohysterogram recordings via deep learning
 
 This is the code developed for our paper "[Predicting preterm births from electrohysterogram recordings via deep learning](https://www.medrxiv.org/content/10.1101/2022.12.25.22283937v1)"  
