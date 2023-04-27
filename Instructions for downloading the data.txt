@@ -1,8 +1,0 @@
-We downloaded data from two databases in the Physionet repository, the Term-Preterm EHG Database (TPEHG DB) and the Term-Preterm EHG with Tocogram Dataset (TPEHGT DS).
-
-The data from the TPEHG DB is available at https://physionet.org/content/tpehgdb/1.0.1/, doi: https://doi.org/10.13026/C2FW2V.
-The data from the TPEHGT DS is available at https://physionet.org/content/tpehgt/1.0.0/, doi: https://doi.org/10.13026/C2166R.
-
-The data are available in the .dat format, which can be converted to a MATLAB format (.mat) using the wfdb2mat function provided by the wfdb toolbox from Physionet
-(available at https://archive.physionet.org/physiotools/matlab/wfdb-app-matlab/).
-We provide the data in .mat format in the folder “database_format_matlab.”
