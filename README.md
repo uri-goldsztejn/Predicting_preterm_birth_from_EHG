@@ -2,7 +2,7 @@
 
 # Predicting preterm births from electrohysterogram recordings via deep learning
 
-This is the code developed for our paper "[Predicting preterm births from electrohysterogram recordings via deep learning](https://www.medrxiv.org/content/10.1101/2022.12.25.22283937v1)"  
+This is the code developed for our paper "[Predicting preterm births from electrohysterogram recordings via deep learning](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0285219)"  
 
 Uri Goldsztejn, Arye Nehorai  
 Washington University in St. Louis, 2023
@@ -50,4 +50,5 @@ MATLAB>=R2021a
 
 ## Citation
 
-Goldsztejn, Uri, and Arye Nehorai. "Predicting preterm births from electrohysterogram recordings via deep learning." medRxiv (2022): 2022-12.
+Predicting preterm births from electrohysterogram recordings via deep learning
+Goldsztejn U, Nehorai A (2023) Predicting preterm births from electrohysterogram recordings via deep learning. PLOS ONE 18(5): e0285219.
